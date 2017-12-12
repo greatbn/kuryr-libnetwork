@@ -1691,7 +1691,7 @@ def ipam_request_address():
                 num_ports = len(filtered_ports)
                 fixed_ips.append(fixed_ip)
 
-                if num_ports:
+                if num_ports == 1:
                     existing_port = filtered_ports[0]
                     created_port = _update_existing_port(
                         existing_port, fixed_ip, req_mac_address)
